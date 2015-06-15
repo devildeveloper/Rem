@@ -48,9 +48,14 @@ module.exports.routes = {
   ***************************************************************************/
   'post /user/create':{
     controller:'UsersController',
-    action:'create',
+    action:'createUser',
     skipAssets: true
   },
+  'post /user/createAdmin':{
+    controller:'UsersController',
+    action:'createAdmin',
+    skipAssets: true
+  },  
   'post /user/createRoom':{
     controller:'UsersController',
     action:'createRoom',
@@ -58,17 +63,17 @@ module.exports.routes = {
   },  
   'get /user/:userId':{
     controller:'UsersController',
-    action:'find',
+    action:'findUser',
     skipAssets: true
   },
   'get /user':{
     controller:'UsersController',
-    action:'find',
+    action:'findUser',
     skipAssets: true
   },
   'get /user/rooms':{
     controller:'UsersController',
-    action:'getRooms',
+    action:'myRooms',
     skipAssets: true
   },
   //passport login

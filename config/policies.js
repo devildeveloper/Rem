@@ -49,10 +49,11 @@ module.exports.policies = {
 		// feed : ['isNiceToAnimals', 'hasRabbitFood']
 	// }
     'UsersController':{
-      'create':true,
-      'find':['isAuthenticated','isAdmin'],//role admin
+      'createUser':true,
+      'createAdmin':true,
+      'findUser':['isAuthenticated','isAdmin'],//role admin
       'createRoom':'isAuthenticated',
-      'getRooms':'isAuthenticated',
+      'myRooms':'isAuthenticated',
       'login':true,
       'logout':'isAuthenticated'
     }
