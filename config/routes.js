@@ -34,7 +34,8 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
+
 
   /***************************************************************************
   *                                                                          *
@@ -45,5 +46,38 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
-
+  'post /user/create':{
+    controller:'UsersController',
+    action:'create',
+    skipAssets: true
+  },
+  'post /user/createRoom':{
+    controller:'UsersController',
+    action:'createRoom',
+    skipAssets: true
+  },  
+  'get /user/:userId':{
+    controller:'UsersController',
+    action:'find',
+    skipAssets: true
+  },
+  'get /user':{
+    controller:'UsersController',
+    action:'find',
+    skipAssets: true
+  },
+  'get /user/rooms':{
+    controller:'UsersController',
+    action:'getRooms',
+    skipAssets: true
+  },
+  //passport login
+  'get /user/logout':{
+    controller:'UsersController',
+    action:'logout'
+  },
+  'post /user/login':{
+    controller:'UsersController',
+    action:'login'
+  }  
 };

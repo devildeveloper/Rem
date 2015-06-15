@@ -26,7 +26,7 @@ module.exports.policies = {
   *                                                                          *
   ***************************************************************************/
 
-  // '*': true,
+   '*': false,
 
   /***************************************************************************
   *                                                                          *
@@ -48,4 +48,12 @@ module.exports.policies = {
 		// before letting any users feed our rabbits
 		// feed : ['isNiceToAnimals', 'hasRabbitFood']
 	// }
+    'UsersController':{
+      'create':true,
+      'find':['isAuthenticated','isAdmin'],//role admin
+      'createRoom':'isAuthenticated',
+      'getRooms':'isAuthenticated',
+      'login':true,
+      'logout':'isAuthenticated'
+    }
 };

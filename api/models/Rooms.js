@@ -17,7 +17,8 @@ module.exports = {
 			collection:'Users'
 		},
 		owner:{
-			model:'Users' // one to many 
+			model:'Users', // one to many
+			required:true
 		}
 	}
 };

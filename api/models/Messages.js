@@ -6,7 +6,7 @@
 */
 
 module.exports = {
-
+  tableName:'Messages',
   attributes: {
   	room:{
   		model:'Rooms' //one to many
